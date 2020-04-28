@@ -1,0 +1,31 @@
+{
+    "name": "notifier",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron .",
+        "dev": "rollup -c -w",
+        "build": "rollup -c"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "8.2.1",
+        "electron-reload": "1.5.0",
+        "concurrently": "5.1.0",
+        "@rollup/plugin-commonjs": "11.0.0",
+        "@rollup/plugin-node-resolve": "7.0.0",
+        "rollup": "1.20.0",
+        "rollup-plugin-livereload": "1.0.0",
+        "rollup-plugin-svelte": "5.0.3",
+        "rollup-plugin-terser": "5.1.2",
+        "svelte": "3.21.0"
+    },
+    "dependencies": {
+        "cron": "1.8.2",
+        "node-notifier": "7.0.0",
+        "rollup-plugin-scss": "2.4.0"
+    }
+}

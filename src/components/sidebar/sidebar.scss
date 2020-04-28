@@ -1,0 +1,45 @@
+.sidebar {
+    background: #212121;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    color: #FFF;
+    box-sizing: border-box;
+    padding: 50px 0;
+    overflow-x: auto;
+
+    .add-memento {
+        background: #F3662D;
+        color: #FFF;
+        display: block;
+        width: 80%;
+        border: 0;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 15px 20px;
+        margin: 0 auto;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    .mementoes {
+        margin: 50px 0 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+
+        .memento-item {
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            padding: 15px 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &.active {
+                background: #2D2A2E;
+            }
+        }
+    }
+}

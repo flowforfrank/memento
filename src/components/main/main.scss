@@ -1,0 +1,189 @@
+main {
+    margin-left: 250px;
+    color: #FFF;
+    padding: 50px;
+    font-size: 21px;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    .memento-wrapper {
+        display: flex;
+
+        .memento {
+            background: #FFF;
+            padding: 50px;
+            color: #2D2A2E;
+            max-width: 600px;
+            box-sizing: border-box;
+            position: relative;
+
+            .memento-image-holder {
+                display: flex;
+                overflow: hidden;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                width: 500px;
+                height: 500px;
+                background: #CCCCCC;
+
+                .memento-image {
+                    width: 100%;
+                }
+
+                .file-upload {
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                .remove-image {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 0;
+                    border: 0;
+                    background: transparent;
+                    font-size: 28pt;
+                    cursor: pointer;
+                }
+            }
+
+            .memento-title {
+                font-size: 32px;
+            }
+
+            .delete {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: transparent;
+                border: 0;
+                margin: 0;
+                cursor: pointer;
+            }
+        }
+
+        .actions {
+            margin-left: 50px;
+
+            .button {
+                background: #F3662D;
+                color: #FFF;
+                border: 0;
+                font-weight: bold;
+                font-size: 18px;
+                padding: 15px 30px;
+                display: block;
+                margin-bottom: 20px;
+                border-radius: 0;
+                width: 150px;
+                cursor: pointer;
+
+                &.save-button {
+                    background: #0BA94E;
+                }
+            }
+
+            .options {
+                margin-top: 25px;
+
+                .date-time-title {
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 25px;
+                }
+
+                input[type="date"],
+                input[type="time"] {
+                    display: block;
+                    width: 100%;
+                    background: transparent;
+                    color: #FFF;
+                    border: 2px solid #FFF;
+                    position: relative;
+
+                    &:hover:after {
+                        display: none;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        right: 0;
+                        background: url('../img/date.svg');
+                        background-size: 20px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+
+                input[type="time"]:after {
+                    background: url('../img/time.svg');
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                .repeat {
+                    position: relative;
+                    padding-left: 35px;
+                    cursor: pointer;
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+
+                        &:checked ~ .input:after {
+                            display: block;
+                        }
+                    }
+
+                    .input {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        border: 2px solid #FFF;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                            left: 8px;
+                            top: 3px;
+                            width: 5px;
+                            height: 10px;
+                            border: solid #0BA94E;
+                            border-width: 0 4px 4px 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .no-data {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}
